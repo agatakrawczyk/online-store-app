@@ -1,0 +1,12 @@
+<%= link_to 'Back', products_path %>
+
+<p>
+  <b>Product name:</b><br>
+  <%= @product.name %>
+</p>
+<p>
+  <b>Description:</b><br>
+  <%= @product.description %>
+</p>
+
+<%= link_to 'Edit product', edit_product_path(@product) %>
