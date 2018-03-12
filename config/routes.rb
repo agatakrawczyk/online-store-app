@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   resources :products
+  resources :orders
+  resources :line_items, only: :create
 end
