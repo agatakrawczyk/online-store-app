@@ -1,3 +1,12 @@
-<% @order.line_items.each do |line_item| %>
-  <%= line_item.product.name %>
-<% end %>
+<table>
+  <tr>
+    <th>Product:</th>
+  </tr>
+  <% @order.line_items.each do |line_item| %>
+    <tr>
+      <td><%= line_item.product.name %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to 'Back', products_path %>
