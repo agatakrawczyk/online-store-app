@@ -1,10 +1,12 @@
 <table>
   <tr>
     <th>Product:</th>
+    <th>Price:</th>
   </tr>
   <% @order.line_items.each do |line_item| %>
     <tr>
       <td><%= line_item.product.name %></td>
+      <td><%= line_item.product.price %></td>
     </tr>
   <% end %>
 </table>
