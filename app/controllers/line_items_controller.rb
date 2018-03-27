@@ -10,4 +10,12 @@ class LineItemsController < ApplicationController
     redirect_to order_path(Order.last)
   end
 
+  def destroy
+    @line_item = LineItem.find(params[:id])
+    order_id = @line_item.order.id
+    @line_item.delete
+
+    redirect_to order_path(order_id)
+  end
+
 end

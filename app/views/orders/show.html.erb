@@ -7,6 +7,7 @@
     <tr>
       <td><%= line_item.product.name %></td>
       <td><%= line_item.product.price %></td>
+      <td><%= link_to 'Remove', line_item_path(line_item.id), method: :delete %></td>
     </tr>
   <% end %>
 </table>

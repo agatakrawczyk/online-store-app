@@ -6,6 +6,7 @@ class OrdersController < ApplicationController
   end
 
   def show
+    @line_items = current_user.orders.last.line_items
     @order = current_user.orders.find(params[:id])
   end
 
