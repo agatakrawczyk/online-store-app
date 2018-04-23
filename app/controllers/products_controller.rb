@@ -3,7 +3,7 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
-    @order = current_user.orders.last
+    @cart = current_user.carts.last
   end
 
   def show
