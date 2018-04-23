@@ -3,7 +3,10 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
-    @cart = current_user.carts.last
+
+    if user_signed_in?
+      @cart = current_user.carts.last
+    end
   end
 
   def show
