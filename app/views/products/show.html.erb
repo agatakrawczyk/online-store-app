@@ -13,4 +13,6 @@
   <%= @product.price %>
 </p>
 
-<%= link_to 'Edit product', edit_product_path(@product) %>
+<% if admin_signed_in? %>
+  <%= link_to 'Edit product', edit_product_path(@product) %>
+<% end %>
