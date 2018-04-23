@@ -1,21 +1,23 @@
+require 'byebug'
+
 class LineItemsController < ApplicationController
 
   def create
     line_item = LineItem.new
     line_item.product = Product.find(params[:product_id])
-    line_item.order = current_user.orders.last
+    line_item.cart = Cart.last
 
     line_item.save!
 
-    redirect_to order_path(Order.last)
+    redirect_to cart_path(line_item.cart)
   end
 
   def destroy
     @line_item = LineItem.find(params[:id])
-    order_id = @line_item.order.id
+    cart_id = @line_item.cart.id
     @line_item.delete
 
-    redirect_to order_path(order_id)
+    redirect_to cart_path(cart_id)
   end
 
 end
