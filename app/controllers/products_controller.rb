@@ -5,7 +5,7 @@ class ProductsController < ApplicationController
     @products = Product.all
 
     if user_signed_in?
-      @cart = current_user.carts.last
+      @cart = current_user.cart
     end
   end
 

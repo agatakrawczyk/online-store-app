@@ -1,5 +1,7 @@
 <h2>Products:</h2>
 
+<%= link_to 'Show shopping cart', cart_path(@cart.id) %> <br><br>
+
 <table>
   <tr>
     <th>Product name:</th>
@@ -9,6 +11,7 @@
     <th></th>
     <th></th>
   </tr>
+
   <% @products.each do |product| %>
     <tr>
       <td><%= product.name %></td>
