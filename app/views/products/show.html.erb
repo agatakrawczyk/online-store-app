@@ -13,7 +13,9 @@
   <%= @product.price %>
 </p>
 
-<%= link_to 'Add to order', line_items_path(product_id: @product.id), method: :post %>
+<% if user_signed_in? %>
+  <%= link_to 'Add to order', line_items_path(product_id: @product.id), method: :post %>
+<% end %>
 
 <% if admin_signed_in? %>
   <%= link_to 'Edit product', edit_product_path(@product) %>
