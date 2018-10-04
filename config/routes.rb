@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  devise_for :admins
-  devise_for :users, module: "users"
-  root 'welcome#index'
+  root to: 'welcome#index'
 
+  devise_for :users, module: "users"
+	
   resources :products
   resources :orders
   resources :carts

@@ -2,11 +2,13 @@
 
 <table>
   <tr>
+		<th>Image:</th>
     <th>Product:</th>
     <th>Price:</th>
   </tr>
   <% @line_items.each do |line_item| %>
     <tr>
+			<td></td>
       <td><%= line_item.product.name %></td>
       <td><%= line_item.product.price %></td>
       <td><%= link_to 'Remove', line_item_path(line_item.id), method: :delete %></td>
