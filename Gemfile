@@ -38,6 +38,7 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
   gem 'devise', '~> 4.4', '>= 4.4.1'
+  gem "paperclip", "~> 6.0.0"
 end
 
 group :development do
