@@ -8,7 +8,7 @@
   </tr>
   <% @line_items.each do |line_item| %>
     <tr>
-			<td></td>
+			<td><%= image_tag line_item.product.image.url(:thumb) %></td>
       <td><%= line_item.product.name %></td>
       <td><%= line_item.product.price %></td>
       <td><%= link_to 'Remove', line_item_path(line_item.id), method: :delete %></td>
