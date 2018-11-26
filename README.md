@@ -1,6 +1,6 @@
-# README
+# Online store application
 
-Steps that are necessary to get the application up and running: 
+## How to get the application up and running
 
 	git clone 
 	- clone the repository from GitHub to the current directory 
@@ -17,17 +17,16 @@ Steps that are necessary to get the application up and running:
 	bin/rails s
 	- run the application on the local server http://127.0.0.1:3000
 
-Ruby version 
-	- ruby '2.3.4' or newer
+## Technical requirements
+	- ruby '~> 2.3.4' or newer
+	- postrgreSQL
+	- Bundler 
+	- Ruby on Rails '~> 9.5' or newer 
 
-System dependencies
-	- postrgreSQL 
-
-Deployment instructions (Heroku)
+## Deployment instructions (for Heroku)
 	
 	git push heroku master 
 	- deploy the application to Heroku
 	
 	heroku run rails db:migrate
 	- migrate the database 
-
