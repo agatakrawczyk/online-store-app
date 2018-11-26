@@ -32,8 +32,9 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem 'devise', '~> 4.4', '>= 4.4.1'
-gem 'paperclip', '~> 6.0.0'
+gem "paperclip", "~> 6.0.0"
 gem 'bootstrap-sass'
+gem 'jquery-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
