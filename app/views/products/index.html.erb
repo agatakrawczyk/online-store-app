@@ -1,4 +1,4 @@
-<h2>Products:</h2>
+<h2>Shop</h2>
 
 <% if current_user && !current_user.admin %>
   <%= link_to 'Show shopping cart', cart_path(@cart.id) %> <br><br>
@@ -18,12 +18,11 @@
   <% @products.each do |product| %>
     <tr>
 			<% if product.image.present? %>
-				<td><%= image_tag product.image.url(:thumb) %></td>
+				<td><%= link_to image_tag(product.image.url(:thumb)), product_path(product)%></td>
 			<% end %>
       <td><%= product.name %></td>
       <td><%= product.description %></td>
       <td><%= product.price %></td>
-      <td><%= link_to 'Show', product_path(product) %></td>
 			<% if current_user && current_user.admin %>
 	      <td><%= link_to 'Edit', edit_product_path(product) %></td>
       	<td><%= link_to 'Delete', product_path(product), method: :delete, data: { confirm: 'Are you sure?' } %></td>
