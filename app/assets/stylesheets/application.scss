@@ -14,4 +14,30 @@
  *= require_self
  */
  @import "bootstrap-sprockets";
- @import "bootstrap"; 
+ @import "bootstrap";
+// 
+
+header.navbar {
+	position: fixed;
+	padding: 0,2;
+}
+
+.navbar-inverse {
+	background-color: white;
+	border-color: #222;
+}
+
+.navbar-brand {
+  padding: 0;
+}
+	
+.navbar-brand>img {
+  margin-top: -30px;
+  padding: 15px;
+  width: 100px;
+	height: 100px;
+} 
+
+li.nav-item {
+	padding-right: 1rem;
+}
