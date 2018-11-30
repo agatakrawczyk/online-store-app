@@ -1,4 +1,8 @@
-# Online store application
+#  Online store application
+
+## Debucco - online store
+
+ 	Interior design ideas and furniture store
 
 ## How to get the application up and running
 
