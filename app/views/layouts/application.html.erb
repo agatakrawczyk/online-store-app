@@ -35,21 +35,24 @@
 	        <div class="collapse navbar-collapse" id="navbarResponsive">
 	          <ul class="navbar-nav ml-auto">
 	            <li class="nav-item">
-	              <a class="nav-link js-scroll-trigger" href="#home"><%= link_to "Home", root_path %></a>
+	              <%= link_to "Home", root_path, class: 'nav-link' %>
 	            </li>
 							<li class="nav-item">
-								<a class="nav-link js-scroll-trigger" href="#products"><%= link_to "Shop", products_path %></a>
+								<%= link_to "Shop", products_path, class: 'nav-link' %>
 							</li>
 							<% if !user_signed_in? %>
 	            <li class="nav-item">
-	              <a class="nav-link js-scroll-trigger" href="#signin"><%= link_to "Sign in", new_user_session_path %></a>
+	             <%= link_to "Sign in", new_user_session_path, class: 'nav-link' %>
 	            </li>
 							<li class="nav-item">
-								<a class="nav-link js-scroll-trigger" href="#signup"><%= link_to "Sign up", new_user_registration_path %></a>
+								<%= link_to "Sign up", new_user_registration_path, class: 'nav-link' %>
 							</li>
 							<% else %>
 							<li class="nav-item">
-								<a class="nav-link js-scroll-trigger" href="#signout"><%= link_to "Sign out", destroy_user_session_path, method: :delete %></a>
+								<%= link_to "Cart(#{current_user.cart.line_items.size})", cart_path, class: 'nav-link' %>
+							</li>
+							<li class="nav-item">
+								<%= link_to "Sign out", destroy_user_session_path, method: :delete, class: 'nav-link' %></a>
 							</li>
 							<% end %>
 						</ul>

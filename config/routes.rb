@@ -5,6 +5,6 @@ Rails.application.routes.draw do
 	
   resources :products
   resources :orders
-  resources :carts
+  resource :cart
   resources :line_items, only: [:create, :destroy]
 end
