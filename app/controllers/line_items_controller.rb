@@ -3,9 +3,9 @@ require 'byebug'
 class LineItemsController < ApplicationController
 
   def create
-    line_item = LineItem.new
+    line_item = LineItem.new(quantity: params[:quantity])
     line_item.product = Product.find(params[:product_id])
-    line_item.cart = current_user.cart
+    line_item.cart = current_cart
 
     line_item.save!
 

@@ -49,7 +49,7 @@
 							</li>
 							<% else %>
 							<li class="nav-item">
-								<%= link_to "Cart(#{current_user.cart.line_items.size})", cart_path, class: 'nav-link' %>
+								<%= link_to "Cart(#{current_cart.quantity_of_items})", cart_path, class: 'nav-link' %>
 							</li>
 							<li class="nav-item">
 								<%= link_to "Sign out", destroy_user_session_path, method: :delete, class: 'nav-link' %></a>
