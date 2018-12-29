@@ -48,9 +48,15 @@ li.nav-item {
 // TODO change the !important late
 
 div.card-img-top.img-fluid {
-	margin: 10%;
+	margin: 15%;
 }
 
 div.col-lg-3 {
 	margin-top: 10%;
+}
+
+img.d-block.img-fluid {
+	height: 350px;
+  width: 900px; 
+	margin-top: 20px;
 }
