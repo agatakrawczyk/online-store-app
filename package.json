@@ -1,5 +1,7 @@
 {
   "name": "online-store-app",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "heroku": "^7.19.4"
+  }
 }
