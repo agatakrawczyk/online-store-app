@@ -1,5 +1,3 @@
-require 'byebug'
-
 class LineItemsController < ApplicationController
 
   def create
