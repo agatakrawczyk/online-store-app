@@ -79,3 +79,26 @@ div.carousel-caption {
 .h-100 {
 	padding: 50px;
 }
+
+h2.form {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.form-group {
+  margin-left: 25%;
+  margin-top: 20px;
+}
+
+.maxWidth {
+  max-width: 500px;
+  margin-top: 200px;
+  height: 400px;
+  // background-color: grey;
+  border: solid;
+  border-color: #5e5d5b;
+}
+
+.btn-primary {
+  background-color: #5e5d5b !important;
+}
