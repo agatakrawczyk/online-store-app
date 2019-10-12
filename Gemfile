@@ -33,6 +33,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'devise', '~> 4.4', '>= 4.4.1'
 gem "paperclip", "~> 6.0.0"
+gem 'aws-sdk', '~> 2.3'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
 
