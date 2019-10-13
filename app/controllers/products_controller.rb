@@ -23,9 +23,9 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.new(product_params)
-
+    @product.image.attach(params[:product][:image])
+    
     if @product.save
-      # redirect_to products_path
       redirect_to product_path(@product)
     else
       render 'new'
@@ -56,7 +56,7 @@ class ProductsController < ApplicationController
   end
     
   def product_params
-    params.require(:product).permit(:name, :description, :price, :image)
+    params.require(:product).permit(:name, :description, :price, :image, [])
   end
 
 end
