@@ -61,10 +61,8 @@
 				<% @products.each do |product| %>
 					<div class="col-lg-4 col-md-6 mb-4">
 						<div class="cart h-100">
-							<% if product.image.present? %>
-								<%= link_to image_tag(product.image.url(:thumb)), product_path(product)%>
-							<% end %>
-							<div class="card-body">
+              <%= link_to(image_tag(product.image), product_path(product)) if product.image.attached? %>
+              <div class="card-body">
 								<h4 class="card-title"><%= product.name %></h4>
 								<h5><%= product.price %></h5>
 								<p class="card-text"><%= product.description %></p>
@@ -86,18 +84,7 @@
 				<% end %>
 			</div>
 
- 		<!-- Add link to new product -->
-				<!-- <% if current_user && current_user.admin? %>
-					<h3>Add new product: </h3>
-					<%= link_to 'New product', new_product_path %>
-				<% end %>
-				 -->
-		
-		 <!-- Add link to shopping card -->
-				<!-- <% if current_user && !current_user.admin %>
-					<%= link_to 'Show shopping cart', cart_path(@cart.id) %> <br><br>
-				<% end %> -->
-		
+
 		</div>
 	</div>
 </div>

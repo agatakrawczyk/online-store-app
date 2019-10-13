@@ -4,9 +4,9 @@ class ProductsController < ApplicationController
   def index
     @products = Product.all
 
-    if user_signed_in?
-      @cart = current_user.cart
-    end
+    # if user_signed_in?
+    #   @cart = current_user.cart
+    # end
   end
 
   def show
@@ -25,7 +25,8 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
 
     if @product.save
-      redirect_to products_path
+      # redirect_to products_path
+      redirect_to product_path(@product)
     else
       render 'new'
     end
