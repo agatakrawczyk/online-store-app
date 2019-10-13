@@ -9,7 +9,7 @@
   </tr>
   <% @line_items.each do |line_item| %>
     <tr>
-			<td><%= image_tag(line_item.product.image) if line_item.product.image.attached? %></td>
+			<td><%= image_tag(line_item.product.thumbnail) if line_item.product.image.attached? %></td>
       <td><%= line_item.product.name %></td>
       <td><%= line_item.product.price %></td>
 			<td><%= line_item.quantity %></td>

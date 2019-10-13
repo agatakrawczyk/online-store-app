@@ -61,7 +61,7 @@
 				<% @products.each do |product| %>
 					<div class="col-lg-4 col-md-6 mb-4">
 						<div class="cart h-100">
-              <%= link_to(image_tag(product.image), product_path(product)) if product.image.attached? %>
+              <%= link_to(image_tag(product.thumbnail), product_path(product)) if product.image.attached? %>
               <div class="card-body">
 								<h4 class="card-title"><%= product.name %></h4>
 								<h5><%= product.price %></h5>

@@ -5,6 +5,13 @@ class Product < ApplicationRecord
   # active storage
   has_one_attached :image
 
+  def thumbnail
+    return self.image.variant(resize: "200x200!").processed
+  end 
+  
+  def large_thumbnail
+    return self.image.variant(resize: "300x300!").processed
+  end 
   
   # paperclip
   # has_attached_file :image, styles: { large: "600x600>", medium: "300x300>", thumb: "150x150#" }

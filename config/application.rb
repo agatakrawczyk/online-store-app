@@ -3,7 +3,7 @@ require_relative 'boot'
 require 'rails/all'
 
 # Use Vips for processing variants.
-config.active_storage.variant_processor = :vips
+# config.active_storage.variant_processor = :vips
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.

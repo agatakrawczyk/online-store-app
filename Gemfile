@@ -37,7 +37,9 @@ gem 'aws-sdk', '~> 2.3'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'image_processing', '~> 1.2'
-gem "mini_magick"
+gem "mini_magick", '~> 4.8'
+
+gem 'bootsnap', '1.3.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -61,5 +63,3 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # ruby version for heroku
 ruby "~> 2.4.0"
-
-gem 'bootsnap', '~>1.1.2'
