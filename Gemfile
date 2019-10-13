@@ -59,3 +59,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # ruby version for heroku
 ruby "~> 2.4.0"
+
+gem 'bootsnap', '~>1.1.2'
