@@ -34,7 +34,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise', '~> 4.4', '>= 4.4.1'
 gem "paperclip", "~> 6.0.0"
 gem "aws-sdk-s3", require: false
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', '~> 3.4.0'
+gem 'autoprefixer-rails'
+gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 gem 'image_processing', '~> 1.2'
 gem "mini_magick", '~> 4.8'

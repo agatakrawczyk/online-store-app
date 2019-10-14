@@ -20,6 +20,9 @@
 
 /public/system/*
 !/public/system/.keep
+/public/assets/*
+
+/storage/*
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
