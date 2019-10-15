@@ -2,6 +2,10 @@
   "name": "online-store-app",
   "private": true,
   "dependencies": {
-    "heroku": "^7.19.4"
+    "bootstrap": "^4.3.1",
+    "heroku": "^7.19.4",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0",
+    "startbootstrap-shop-homepage": "^4.2.1"
   }
 }

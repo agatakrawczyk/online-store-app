@@ -17,6 +17,10 @@
  @import "bootstrap";
 // 
 
+body {
+  padding-top: 56px;
+}
+
 header.navbar {
 	position: fixed;
 	padding: 0,2;
