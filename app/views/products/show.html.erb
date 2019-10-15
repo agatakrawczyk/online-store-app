@@ -1,29 +1,11 @@
-<div class="container">
-	<div class="row">
-		<div class="col-lg-9">
-			<div class="card mt-4">
-				<div class="card-img-top img-fluid">
-				  <%= image_tag @product.large_thumbnail %>
-				</div>
-				<div class="card-body">
-					<h3 class="card-title">
-					  <%= @product.name %>
-					</h3>
-					<h4>
-						<%= @product.price %>
-					</h4>
-					<p class="card-text">
-					  <%= @product.description %>
-					</p>
-					</div>
-				
-				<% if current_user && current_user.admin? %>
-					<%= link_to 'Edit product', edit_product_path(@product) %>
-				<% end %>
+<%= image_tag @product.large_thumbnail %>
 
-				<%= link_to 'Back', products_path %>
-				
-			</div>
-		</div>
-	</div>
-</div>
+<%= @product.name %>
+<%= @product.price %>
+<%= @product.description %>
+
+<% if current_user && current_user.admin? %>
+	<%= link_to 'Edit product', edit_product_path(@product) %>
+<% end %>
+
+<%= link_to 'Back', products_path %>

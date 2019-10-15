@@ -8,64 +8,22 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
 
-		
-    <!-- Bootstrap core CSS & JS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>	
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>	
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
   </head>
 
-  <body id="page-top">
-		<!-- Navigation -->
-		<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-      <div class="container-fluid">
-        <div class="container">
-					<header class="navbar navbar-fixed-top navbar-inverse">
-  				<div class="container">
-  					<%= link_to image_tag("debucco.png", alt: "logo"), '/', class: 'navbar-brand' %>
-	        <div class="collapse navbar-collapse" id="navbarResponsive">
-	          <ul class="navbar-nav ml-auto">
-	            <!-- <li class="nav-item">
-	              <%= link_to "Home", root_path, class: 'nav-link' %>
-	            </li> -->
-							<li class="nav-item">
-								<%= link_to "Shop", products_path, class: 'nav-link' %>
-							</li>
-							<% if !user_signed_in? %>
-	            <li class="nav-item">
-	             <%= link_to "Log in", new_user_session_path, class: 'nav-link' %>
-	            </li>
-							<li class="nav-item">
-								<%= link_to "Sign up", new_user_registration_path, class: 'nav-link' %>
-							</li>
-							<% else %>
-							<li class="nav-item">
-								<%= link_to "Cart(#{current_cart.quantity_of_items})", cart_path, class: 'nav-link' %>
-							</li>
-							<li class="nav-item">
-								<%= link_to "Sign out", destroy_user_session_path, method: :delete, class: 'nav-link' %></a>
-							</li>
-							<% end %>
-						</ul>
-					</div>
-        </div>
-      </div>
-    </nav>
-			
+  <body>
+    
+    <!-- <%= link_to image_tag("debucco.png", alt: "logo"), '/', class: 'navbar-brand' %> -->
+		<%= link_to "Shop", products_path %>
+		<% if !user_signed_in? %>
+      <%= link_to "Log in", new_user_session_path%>
+   	  <%= link_to "Sign up", new_user_registration_path %>
+    <% elsif user_signed_in?%>
+	    <%= link_to "Cart(#{current_cart.quantity_of_items})", cart_path %>
+   		<%= link_to "Sign out", destroy_user_session_path, method: :delete %></a>
+		<% end %>
+
   <%= yield %>
 	
-	<!-- Footer -->
- 	<footer class="bg-black small text-center text-white-50">
-		<%= render 'layouts/alerts' %> 	
-		<div class="container">
-	  	About us | Contact us | Shipping & Returns | Privacy Policy | Terms & Conditions 
-		</div>
- 	</footer>
- 
-
   </body>
   
 </html>
