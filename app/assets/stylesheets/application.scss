@@ -15,4 +15,23 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
-// 
+//
+
+body {
+  padding-top: 100px;
+}
+
+.navbar {
+  border-bottom: 1px;
+  border-style: solid;
+}
+
+.bg-color {
+  background-color: white;
+}
+
+.navbar-brand>img {
+  height: 100%; 
+  width: auto;
+  padding-left: 100px;
+}
