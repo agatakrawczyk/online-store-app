@@ -38,7 +38,7 @@ gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'image_processing', '~> 1.2'
 gem "mini_magick", '~> 4.8'
-gem "font-awesome-rails"
+gem 'font-awesome-sass', '~> 5.11.2'
 
 gem 'bootsnap', '1.3.0'
 

@@ -42,7 +42,7 @@
           <% elsif user_signed_in?%>
       	    <li class="nav-item">
               <%= link_to cart_path, class: "nav-link" do %>
-                 <i class="glyphicon glyphicon-shopping-cart"></i>               
+                 <i class="fas fa-shopping-cart"></i>             
                  <%= "(#{current_cart.quantity_of_items})" %>
               <% end %>
               
