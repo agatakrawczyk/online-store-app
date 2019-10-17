@@ -22,23 +22,40 @@
 
   <body>
 
-    <nav class="navbar navbar-expand-sm bg-color fixed-top">
+    <nav class="navbar navbar-expand-sm bg-color navbar-light fixed-top">
       <%= link_to image_tag("debucco.png", alt: "logo"), '/', class: "navbar-brand" %>
-  
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <%= link_to "Shop", products_path, class: "nav-link" %>
+          </li>
+          <% if !user_signed_in? %>
+            <li class="nav-item">
+                <%= link_to "Log in", new_user_session_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+                <%= link_to "Sign up", new_user_registration_path, class: "nav-link" %>
+            </li>
+          <% elsif user_signed_in?%>
+      	    <li class="nav-item">
+              <%= link_to cart_path, class: "nav-link" do %>
+                 <i class="glyphicon glyphicon-shopping-cart"></i>               
+                 <%= "(#{current_cart.quantity_of_items})" %>
+              <% end %>
+              
+            </li>
+         		<li class="nav-item">
+              <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+              </li>
+    		  <% end %>
+        </ul>
+      </div> 
     </nav>
-    
-		<%= link_to "Shop", products_path %>
-		<% if !user_signed_in? %>
-      <%= link_to "Log in", new_user_session_path%>
-   	  <%= link_to "Sign up", new_user_registration_path %>
-    <% elsif user_signed_in?%>
-	    <%= link_to "Cart(#{current_cart.quantity_of_items})", cart_path %>
-   		<%= link_to "Sign out", destroy_user_session_path, method: :delete %></a>
-		<% end %>
-
+    <br>
+  
   <%= yield %>
 	
   </body>

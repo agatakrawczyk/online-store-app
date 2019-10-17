@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+ @import "font-awesome";
  @import "bootstrap-sprockets";
  @import "bootstrap";
 //
@@ -33,5 +34,4 @@ body {
 .navbar-brand>img {
   height: 100%; 
   width: auto;
-  padding-left: 100px;
 }
