@@ -1,11 +1,53 @@
-<h1>Debucco</h1>
+<div class="container">
+  <div class="row">
+    
+    <div class="col-sm-3">
+      <h1>Debucco</h1>
+      <p>TABLES</p>
+      <p>LAMPS</p>
+      <p>CHAIRS</p>
+      <p>SOFAS</p>
+      <p>BEDS</p>
+    </div>
 
-<p>TABLES</p>
-<p>LAMPS</p>
-<p>CHAIRS</p>
-<p>SOFAS</p>
-<p>BEDS</p>
-			
+    <div class="col-sm-9">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="d-block img-fluid">
+              <%= image_tag("sofaindustrialwhite.jpg", alt: "third slide") %>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-block img-fluid">
+              <%= image_tag("sofaindustrialwhiteside.jpg", alt: "first slide") %>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-block img-fluid">
+              <%= image_tag("sofaindustrialwhiteback.jpg", alt: "second slide") %>
+            </div>
+          </div>
+        </div>
+        
+        <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+        
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Industrial sofa with organic cotton</h5>
+          <p>1000 &euro;</p>
+        </div>
+ 
+      </div>
+    </div>
+  </div>
+</div>
+      
 <% @products.each do |product| %>
   <%= link_to(image_tag(product.thumbnail), product_path(product)) if product.image.attached? %>
   <%= product.name %>
