@@ -1,66 +1,75 @@
 <div class="container">
   <div class="row">
-    
     <div class="col-sm-3">
-      <h1>Debucco</h1>
-      <p>TABLES</p>
-      <p>LAMPS</p>
-      <p>CHAIRS</p>
-      <p>SOFAS</p>
-      <p>BEDS</p>
+      <h1 class="my-4">DEBUCCO</h1>
+      <ol class="list-group">
+        <li class="list-group-item disabled">TABLES</li>
+        <li class="list-group-item disabled">LAMPS</li>
+        <li class="list-group-item disabled">CHAIRS</li>
+        <li class="list-group-item disabled">SOFAS</li>
+        <li class="list-group-item disabled">BEDS</li>
+      </ol>
     </div>
 
     <div class="col-sm-9">
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        
-        <div class="carousel-inner">
-          <div class="carousel-item active">
+        <div class="carousel-inner" role="listbox">
+          <div class="carousel-item active" role="option">
             <div class="d-block img-fluid">
               <%= image_tag("sofaindustrialwhite.jpg", alt: "third slide") %>
             </div>
           </div>
-          <div class="carousel-item">
+          <div class="carousel-item" role="option">
             <div class="d-block img-fluid">
               <%= image_tag("sofaindustrialwhiteside.jpg", alt: "first slide") %>
             </div>
           </div>
-          <div class="carousel-item">
+          <div class="carousel-item" role="option">
             <div class="d-block img-fluid">
               <%= image_tag("sofaindustrialwhiteback.jpg", alt: "second slide") %>
             </div>
           </div>
         </div>
-        
         <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
           <span class="carousel-control-prev-icon"></span>
         </a>
         <a class="carousel-control-next" href="#myCarousel" data-slide="next">
           <span class="carousel-control-next-icon"></span>
-        </a>
-        
+        </a>        
         <div class="carousel-caption d-none d-md-block">
           <h5>Industrial sofa with organic cotton</h5>
           <p>1000 &euro;</p>
         </div>
- 
+      </div>
+      
+      <div class="row">
+        <% @products.each do |product| %>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card">
+            <div class="card-img-top">
+              <%= link_to(image_tag(product.thumbnail), product_path(product)) if product.image.attached? %>
+            </div>
+            <div class="card-body">
+              <h4 class="card-title"><%= product.name %></h4>
+              <h5><%= product.price %></h5>
+              <p class="card-text"><%= product.description %></p>
+            </div>
+            <div class="card-footer">
+              <% if current_user && current_user.admin? %>
+            		<%= link_to 'Edit', edit_product_path(product) %>
+            		<%= link_to 'Delete', product_path(product), method: :delete, data: { confirm: 'Are you sure?' } %>
+            	<% elsif current_user && !current_user.admin %>
+            		<%= form_tag(line_items_path(product_id: product.id)) do %>
+            			<%= number_field_tag(:quantity, 1) %>
+            			<%= submit_tag('Add to shopping cart') %>
+            		<% end %>
+            	<% elsif !user_signed_in? %>
+            	<% end %>
+            </div>
+          </div>
+        </div>
+        <% end %>
       </div>
     </div>
   </div>
 </div>
-      
-<% @products.each do |product| %>
-  <%= link_to(image_tag(product.thumbnail), product_path(product)) if product.image.attached? %>
-  <%= product.name %>
-  <%= product.price %>
-  <%= product.description %>
-  <% if current_user && current_user.admin? %>
-		<%= link_to 'Edit', edit_product_path(product) %>
-		<%= link_to 'Delete', product_path(product), method: :delete, data: { confirm: 'Are you sure?' } %>
-	<% elsif current_user && !current_user.admin %>
-		<%= form_tag(line_items_path(product_id: product.id)) do %>
-			<%= number_field_tag(:quantity, 1) %>
-			<%= submit_tag('Add to shopping cart') %>
-		<% end %>
-	<% elsif !user_signed_in? %>
-	<% end %>
-<% end %>
