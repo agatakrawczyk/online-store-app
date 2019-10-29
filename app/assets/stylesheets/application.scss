@@ -13,96 +13,57 @@
  *= require_tree .
  *= require_self
  */
- @import "bootstrap-sprockets";
- @import "bootstrap";
-// 
+//
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
-header.navbar {
-	position: fixed;
-	padding: 0,2;
+body {
+  padding-top: 80px;
 }
 
-.navbar-inverse {
-	background-color: white;
-	border-color: #222;
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.navbar-brand {
-  padding: 0;
+.navbar {
+  border-bottom: 1px;
+  border-style: solid;
 }
-	
+
+.bg-color {
+  background-color: white;
+}
+
 .navbar-brand>img {
-  margin-top: -30px;
-  padding: 15px;
-  width: 100px;
-	height: 100px;
-} 
-
-li.nav-item {
-	padding-right: 1rem;
+  height: 100%; 
+  width: auto;
 }
 
-#mainNav .nav-link {
-	color: grey !important;
-}
-// TODO change the !important late
-
-div.card-img-top.img-fluid {
-	margin: 15%;
+#myCarousel {
+  width: 80%;
+  margin: 0 auto;
 }
 
-div.col-lg-3 {
-	margin-top: 10%;
+.carousel-inner {
+  margin-bottom: 10px;
 }
 
-.d-block.img-fluid {
-	height: 500px;
-	width: 900px; 
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+  max-height: 500px;
+  // max-width: 400px;
+  margin: auto;
 }
 
-div.d-block.img-fluid {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 65%;
-	padding: 20px 0;
-}
-
-.carousel-control {
-	width: auto;
+.carousel-control {	
+	width: auto;	
 }
 
 div.carousel-caption {
-	color: black;
-}
-
-.h-100 {
-	padding: 50px;
-}
-
-h2.form {
-  margin-top: 40px;
-  text-align: center;
-}
-
-.form-group {
-  margin-left: 25%;
-  margin-top: 20px;
-}
-
-.maxWidth {
-  max-width: 500px;
-  margin-top: 200px;
-  height: 400px;
-  // background-color: grey;
-  border: solid;
-  border-color: #5e5d5b;
-}
-
-.btn-primary {
-  background-color: #5e5d5b !important;
-}
-
-p.addmargin {
-  margin-top: 40px;
+  color: black;
 }
