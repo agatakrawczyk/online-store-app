@@ -9,5 +9,6 @@ class User < ApplicationRecord
   validates :email, :password, presence: true
   validates :email, uniqueness: true
   validates :password, length: { minimum: 6 }
+  validates_confirmation_of :password
 
 end
