@@ -19,6 +19,9 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+body {
+  margin-top: 80px !important;
+}
 
 .container {
   width: 100%;
@@ -27,8 +30,7 @@
 }
 
 .navbar {
-  border-bottom: 1px;
-  border-style: solid;
+  // border-bottom: solid 1px black;
 }
 
 .bg-color {
@@ -41,9 +43,14 @@
 }
 
 .card.registration {
-  width: 400px;
-  padding: 1.5rem;
-  border: solid grey;
+  width: 30%;
+  min-width: 300px;
+  border: solid 1px #585858;
+  margin-top: 5rem;
+}
+
+div.card-body.registration {
+  padding: 3rem;
 }
 
 #myCarousel {
@@ -78,4 +85,14 @@ div.carousel-caption {
   width: 100%;
   height: 100%;
   height: auto;
+}
+
+.btn.btn-primary {
+  background-color: #585858;
+  border: solid 1px #585858;
+}
+
+.btn.btn-primary:hover {
+  background-color: #898686;
+  border: solid 1px #898686;
 }

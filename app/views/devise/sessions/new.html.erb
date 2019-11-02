@@ -1,13 +1,13 @@
-<div class="container-fluid">   
-  <div class="card mt-4 mx-auto registration">
-    <div class="card-body">
-      
+<div class="container">
+  <div class="card mx-auto registration">
+    <div class="card-body registration">
+
       <h4 class="card-title text-center">Log in</h4>
 
-      <div class="col-sm">  
+      <div class="col-sm">
         <%= form_for(resource, as: resource_name, url: session_path(resource_name), class: "form-horizontal") do |f| %>
           <%= devise_error_messages! %>
-      
+
           <div class="form-group">
             <%= f.label :email %>
             <%= f.email_field :email, autofocus: true, autocomplete: "email", required: true, class: "form-control" %>
@@ -30,18 +30,17 @@
             <%= content_tag(:div, flash[:notice], :id => "flash_notice") if flash[:notice] %>
             <%= content_tag(:div, flash[:alert], :id => "flash_alert") if flash[:alert] %>
           </div>
-      
+
           <div class="form-group">
-            <%= f.submit "Log in", class: "btn btn-secondary btn-lg"  %>
+            <%= f.submit "Log in", class: "btn btn-primary btn-lg"  %>
           </div>
-      
+
           <div class="form-group">
             <%= render "devise/shared/links" %>
           </div>
         <% end %>
-      </div>  
-      
+      </div>
+
     </div>
   </div>
 </div>
-
