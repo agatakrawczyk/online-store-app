@@ -1,37 +1,39 @@
-<div class="container">
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner welcomePage">
-      <div class="carousel-item active">
-        <div class="d-block w-100">
-          <%= image_tag("1_brutalisttropical.jpg") %>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="d-block w-100">
-          <%= image_tag("2_furniture-reclaimedwood")%>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="d-block w-100">
-          <%= image_tag("3_tropicalhome.jpg")%>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner welcomePage">
+    <div class="carousel-item active">
+      <div class="d-block w-100">
+        <%= image_tag("1_brutalisttropical.jpg") %>
+        <div class="carousel-caption d-none d-md-block">
+          <h3 class="captionWelcome">Eco-friendly furniture & interior designs for your conscious home</h3>
+          <button class="btn btn-secondary btn-lg"><%= link_to "Welcome", products_path %></button>
         </div>
       </div>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
+    <div class="carousel-item">
+      <div class="d-block w-100">
+        <%= image_tag 'https://images.unsplash.com/photo-1422246654994-34520d5a0340?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'%>
+        <div class="carousel-caption d-none d-md-block">
+          <h3 class="captionWelcome">Modern & Natural</h3>
+          <p>Handmade furniture of reclaimed wood, hand-welded steel and organic textiles.</p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="d-block w-100">
+        <%= image_tag 'https://images.unsplash.com/photo-1490100667990-4fced8021649?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=752&q=80'%>
+        <div class="carousel-caption d-none d-md-block">
+          <h3 class="captionWelcome">Good for health & low impact on the environnement</h3>
+          <p>Unique furniture made of renewable and sustainable resources, produced without harmful toxins</p>
+        </div>
+      </div>
+    </div>
   </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
 </div>
-<%= link_to "DEBUCCO", products_path %></h1>
-
-<p>Interior design ideas and furniture store<p>
