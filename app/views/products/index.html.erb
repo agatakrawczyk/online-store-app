@@ -35,18 +35,18 @@
         </a>
         <a class="carousel-control-next" href="#myCarousel" data-slide="next">
           <span class="carousel-control-next-icon"></span>
-        </a>        
+        </a>
         <div class="carousel-caption d-none d-md-block">
           <h5>Industrial sofa with organic cotton</h5>
           <p>1000 &euro;</p>
         </div>
       </div>
-      
+
       <div class="row">
         <% @products.each do |product| %>
-        <div class="col-lg-4 col-md-6 mb-4">
+        <div class="col-lg-4 col-sm-6 mb-4">
           <div class="card">
-            <div class="card-img-top img-fluid">
+            <div class="card-img-top img-fluid img-thumbnail">
               <div class="text-center">
                 <%= link_to(image_tag(product.thumbnail), product_path(product)) if product.image.attached? %>
               </div>
