@@ -36,7 +36,7 @@ gem "paperclip", "~> 6.0.0"
 gem "aws-sdk-s3", require: false
 gem 'bootstrap-sass'
 gem 'jquery-rails'
-gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.12'
 gem "mini_magick", '~> 4.8'
 gem 'font-awesome-sass', '~> 5.11.2'
 
